@@ -3,6 +3,13 @@ layout: default
 ---
 
 <h2 class="post_title">{{page.title}}</h2>
+
+[A un lado]
+
+{% include tag_list.html level=2 prefix=page.tag %}
+
+[Al otro lado]
+
 <ul>
   {% for post in site.posts %}
   {% for tag in post.tags %}
