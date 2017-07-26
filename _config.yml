@@ -1,0 +1,24 @@
+title: libreim
+
+theme: minima
+
+locale: "es"
+permalink: pretty
+
+exclude:
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
+
+# Tag configuration
+tag_dir: ""
+tag_title_prefix: ""
+tag_title_suffix: ""
+
+defaults:
+  -
+    scope:
+      path: "_posts" # an empty string here means all files in the project
+    values:
+      layout: "post"
