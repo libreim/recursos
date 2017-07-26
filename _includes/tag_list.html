@@ -11,7 +11,7 @@
   {% assign tag_remainder = tag_name | remove_first: tag_prefix %}
   {% if tag_remainder contains "/" %}{% else %}
   <li>
-    <a href="/{{ tag_name }}">{{ tag_remainder }}</a>
+    <a href="{{ site.baseurl }}/{{ tag_name }}">{{ tag_remainder }}</a>
     {% assign level = include.level | default: 1 %}
     {% if level == 2 %}
     <ul>
@@ -23,7 +23,7 @@
       {% assign tag2_remainder = tag2_name | remove_first: tag2_prefix %}
       {% if tag2_remainder contains "/" %}{% else %}
       <li>
-        <a href="/{{ tag2_name }}">{{ tag2_remainder }}</a>
+        <a href="{{ site.baseurl }}/{{ tag2_name }}">{{ tag2_remainder }}</a>
       </li>
       {% endif %}
       {% endif %}
