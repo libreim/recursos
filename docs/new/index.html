@@ -125,48 +125,31 @@
   <input name="author" placeholder="Autor(a)" />
   <input name="content" placeholder="Descripción corta (opcional)" />
   <input name="tag" placeholder="Etiquetas (separadas por comas)" />
-  <p></p>
+  <p><em>Necesitas una cuenta de GitHub para enviarnos recursos.</em></p>
   <input type="submit" value="Enviar" />
-  <p>Necesitas una cuenta de GitHub para enviarnos recursos. Tras pulsar <em>Enviar</em> haz clic en <em>Add new file</em>.</p>
+  <details class="ejercicio">
+    <summary>Paso a paso</summary>
+    <h3>Si tienes acceso al repositorio</h3>
+    <p>Tras pulsar <em>Enviar</em> haz clic en <em>Commit new file</em>.</p>
+    <h3>Si no tienes acceso de escritura</h3>
+    <p>
+      Hemos tratado de que este proceso sea lo más simple posible. Únicamente, pulsa <em>Enviar</em> y sigue los botones verdes:
+      <img src="/recursos/assets/images/new-resource-1-fork.jpeg" />
+      Primero, confirma que quieres hacer un fork del repositorio.
+    </p>
+    <p>
+      <img src="/recursos/assets/images/new-resource-2-propose.jpeg" />
+      Después, propón el nuevo archivo (los datos estarán rellenos, no tienes que hacer nada más).
+    </p>
+    <p>
+      <img src="/recursos/assets/images/new-resource-3-compare.jpeg" />
+      Finalmente, crea la <em>pull request</em>.
+      <img src="/recursos/assets/images/new-resource-4-create.jpeg" />
+    </p>
+  </details>
 </form>
 
-<script type="text/javascript">
-  var filename = function(title) {
-  var time = new Date();
-  var day = time.getDate();
-  var month = time.getMonth() + 1;
-  var year = time.getYear();
-  
-  return year + "-" + month + "-" + day + "-" + title.toLowerCase().replace(/\s/g, "-") + ".md";
-  }
-
-
-  var yml = function(title, author, tag, content) {
-    var template = `---
-title: ${title}
-author: ${author}
-tags:
-- ${tag}
----
-
-${content}
-`;
-  
-
-  return template;
-  
-  }
-
-  
-  var form = document.querySelector("#new_resource");
-  form.onsubmit = function(event) {
-  form.querySelector("[name='filename']").value = filename(form.querySelector("[name='title']").value);
-  form.querySelector("[name='message']").value = "Añade recurso: " + form.querySelector("[name='title']").value;
-  form.querySelector("[name='value']").value = yml(form.querySelector("[name='title']").value, form.querySelector("[name='author']").value, form.querySelector("[name='tag']").value, form.querySelector("[name='content']").value);
-  
-  return true;
-  };
-</script>
+<script type="text/javascript" src="/recursos/assets/js/new.js"></script>
 
   </div>
 
