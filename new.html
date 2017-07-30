@@ -1,0 +1,56 @@
+---
+title: Nuevo recurso
+layout: post
+---
+
+<form id="new_resource" action="https://github.com/fdavidcl/recursos/new/master/_posts" method="GET">
+  <input name="filename" placeholder="filename" hidden />
+  <textarea name="value" hidden></textarea>
+  <input name="message" placeholder="commit" hidden />
+  <p></p>
+  <input name="title" placeholder="Título del recurso" />
+  <input name="author" placeholder="Autor(a)" />
+  <input name="content" placeholder="Descripción corta (opcional)" />
+  <input name="tag" placeholder="Etiquetas (separadas por comas)" />
+  <p></p>
+  <input type="submit" value="Enviar" />
+  <p>Necesitas una cuenta de GitHub para enviarnos recursos. Tras pulsar <em>Enviar</em> haz clic en <em>Add new file</em>.</p>
+</form>
+
+<script type="text/javascript">
+  var filename = function(title) {
+  var time = new Date();
+  var day = time.getDate();
+  var month = time.getMonth() + 1;
+  var year = time.getYear();
+  
+  return year + "-" + month + "-" + day + "-" + title.toLowerCase().replace(/\s/g, "-") + ".md";
+  }
+
+
+  var yml = function(title, author, tag, content) {
+    var template = `---
+title: ${title}
+author: ${author}
+tags:
+- ${tag}
+---
+
+${content}
+`;
+  
+
+  return template;
+  
+  }
+
+  
+  var form = document.querySelector("#new_resource");
+  form.onsubmit = function(event) {
+  form.querySelector("[name='filename']").value = filename(form.querySelector("[name='title']").value);
+  form.querySelector("[name='message']").value = "Añade recurso: " + form.querySelector("[name='title']").value;
+  form.querySelector("[name='value']").value = yml(form.querySelector("[name='title']").value, form.querySelector("[name='author']").value, form.querySelector("[name='tag']").value, form.querySelector("[name='content']").value);
+  
+  return true;
+  };
+</script>

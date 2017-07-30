@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>latex</title>
+  <title>Nuevo recurso</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/recursos/assets/main.css">
-  <link rel="canonical" href="/recursos/codigo/latex/">
+  <link rel="canonical" href="/recursos/new/">
   <link rel="alternate" type="application/rss+xml" title="libreim" href="/recursos/feed.xml">
   
   
@@ -103,79 +103,75 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h2 class="post_title">latex</h2>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-[A un lado]
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Nuevo recurso</h1>
+    <p class="post-meta">
+      <time datetime="" itemprop="datePublished">
+        
+        
+      </time>
+      </p>
+  </header>
 
-<ul>
+  <div class="post-content" itemprop="articleBody">
+    <form id="new_resource" action="https://github.com/fdavidcl/recursos/new/master/_posts" method="GET">
+  <input name="filename" placeholder="filename" hidden />
+  <textarea name="value" hidden></textarea>
+  <input name="message" placeholder="commit" hidden />
+  <p></p>
+  <input name="title" placeholder="Título del recurso" />
+  <input name="author" placeholder="Autor(a)" />
+  <input name="content" placeholder="Descripción corta (opcional)" />
+  <input name="tag" placeholder="Etiquetas (separadas por comas)" />
+  <p></p>
+  <input type="submit" value="Enviar" />
+  <p>Necesitas una cuenta de GitHub para enviarnos recursos. Tras pulsar <em>Enviar</em> haz clic en <em>Add new file</em>.</p>
+</form>
+
+<script type="text/javascript">
+  var filename = function(title) {
+  var time = new Date();
+  var day = time.getDate();
+  var month = time.getMonth() + 1;
+  var year = time.getYear();
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</ul>
+  return year + "-" + month + "-" + day + "-" + title.toLowerCase().replace(/\s/g, "-") + ".md";
+  }
 
 
-[Al otro lado]
+  var yml = function(title, author, tag, content) {
+    var template = `---
+title: ${title}
+author: ${author}
+tags:
+- ${tag}
+---
 
-<ul>
+${content}
+`;
   
+
+  return template;
   
+  }
+
   
+  var form = document.querySelector("#new_resource");
+  form.onsubmit = function(event) {
+  form.querySelector("[name='filename']").value = filename(form.querySelector("[name='title']").value);
+  form.querySelector("[name='message']").value = "Añade recurso: " + form.querySelector("[name='title']").value;
+  form.querySelector("[name='value']").value = yml(form.querySelector("[name='title']").value, form.querySelector("[name='author']").value, form.querySelector("[name='tag']").value, form.querySelector("[name='content']").value);
   
+  return true;
+  };
+</script>
+
+  </div>
+
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="archive_list">
-    <a class="archive_list_article_link" href='/2017/07/26/plantillas-latex/'><time style="color:#666;font-size:11px;" datetime='2017-07-26'>07/26/17</time></a> <a class="archive_list_article_link" href='/2017/07/26/plantillas-latex/'>Plantillas para LaTeX</a>
-    <p class="summary"></p>
-    <ul class="tag_list">
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/codigo">codigo</a></li>
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/codigo/latex">codigo/latex</a></li>
-      
-    </ul>
-  </li>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</ul>
+</article>
 
       </div>
     </main>
