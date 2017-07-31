@@ -1,113 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+      <!--link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/menus-min.css" /-->
+      <link rel="stylesheet" type="text/css" href="/recursos/assets/fonts/css/iconim.css" />
+      <link rel="stylesheet" type="text/css" href="https://libreim.github.io/assets/css/default.css" />
+      <link rel="stylesheet" type="text/css" href="https://libreim.github.io/assets/css/pygments-friendly.css" />
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://libreim.github.io/assets/feed.xml" />
 
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Favicon -->
+      <link rel="shortcut icon" type="image/x-icon" href="https://libreim.github.io/assets/images/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="160x160" href="https://libreim.github.io/assets/images/favicon-160.png">
+    	<meta name="msapplication-TileColor" content="#FFFFFF">
+    	<meta name="msapplication-TileImage" content="https://libreim.github.io/assets/images/favicon-160.png">
+      <meta name="theme-color" content="#6789ab">
 
-  <title>apuntes</title>
-  <meta name="description" content="">
+      <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+      <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-  <link rel="stylesheet" href="/recursos/assets/main.css">
-  <link rel="canonical" href="/recursos/apuntes/">
-  <link rel="alternate" type="application/rss+xml" title="libreim" href="/recursos/feed.xml">
-  
-  
-</head>
-
-
-  <body>
-
-    <header class="site-header" role="banner">
-
-  <div class="wrapper">
-    
-    
-    <a class="site-title" href="/recursos/">libreim</a>
-  
-    
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger">
-          
-            
-            
-            <a class="page-link" href="/recursos/">Recursos</a>
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/new/">Nuevo recurso</a>
-            
-          
-            
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/posts/">Posts</a>
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/apuntes/">apuntes</a>
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/apuntes/matem%C3%A1ticas/">matemáticas</a>
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/apuntes/matem%C3%A1ticas/%C3%A1lgebra/">álgebra</a>
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/codigo/">codigo</a>
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/codigo/latex/">latex</a>
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/apuntes/cosillas/">cosillas</a>
-            
-          
-            
-            
-            <a class="page-link" href="/recursos/apuntes/matem%C3%A1ticas/an%C3%A1lisis/">análisis</a>
-            
-          
-        </div>
-      </nav>
-    
+      <script type="text/javascript">
+         WebFont.load({
+            google: {
+               families: ["Lato:400,300,700,400italic:latin", "Source+Code+Pro:400,700:latin"]
+            }
+         });
+      </script>
+      <script type="text/javascript">
+            MathJax.Hub.Config({
+               tex2jax: {
+                  inlineMath: [],
+                  displayMath: [],
+               }
+            });
+      </script>
+      <title>apuntes - libreim</title>
+   </head>
+   <body>
+      <header>
+  <div class="pure-menu pure-menu-horizontal pure-g">
+    <div class="pure-u-1-24 pure-u-md-1-24 pure-u-lg-1-5"></div>
+    <div class="pure-u-22-24 pure-u-md-22-24 pure-u-lg-3-5">
+      <input type="checkbox" id="show-menu">
+      <label class="hamburger" for="show-menu"></label>
+      <div class="sites">
+        <a href="/" class="pure-menu-link" title="Inicio">Inicio</a>
+        <a href="/blog/" class="pure-menu-link" title="Inicio">Blog</a>
+        <a href="/overflow/" class="pure-menu-link" title="Foro">Overflow</a>
+        <a href="/awesome/apuntes" class="pure-menu-link" title="Apuntes">Apuntes</a>
+        <a href="/awesome/" class="pure-menu-link" title="Awesome">Awesome</a>
+        <a href="/contributing/" class="pure-menu-link" title="Participa">Participa</a>
+      </div>
+      <a href="/" class="site-title pure-menu-heading">&nbsp;</a>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-24 pure-u-lg-1-5"></div>
   </div>
 </header>
 
+      <div class="pure-g">
+  <div class="pure-u-1-24 pure-u-md-1-24 pure-u-lg-1-5"></div>
+  <div class="pure-u-22-24 pure-u-md-22-24 pure-u-lg-3-5 pure-u-xl-3-5">
+    <article class="container" lang="es">
+      
+      
+      
+      
+      <div class="breadcrumbs category">
+  <a href="/recursos/">recursos</a><span class="separator"></span>
+  
+  
+  
+  
+  
+  
+</div>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <h2 class="post_title">apuntes</h2>
+      
 
-[A un lado]
+      
+      <h1>
+        
+        <a href="/recursos/apuntes/">
+          apuntes
+        </a>
+        
+      </h1>
+      
 
-<ul>
+      
+
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-2-3 pure-u-lg-2-3">
+          
+
+
+<article>
+  <p class="post-title">
+    <a href='https://github.com/libreim/PAC-learning/blob/master/introduccion.pdf' class="title">
+      
+      <i class="icon icon-small icon-link-ext"></i>
+      
+      Aprendizaje PAC
+    </a>
+    Apuntes de introducción al aprendizaje PAC
+
+  </p>
+  <span class="post-data">
+    
+     
+    <span class="author">Nacho Cordón</span>
+    
+    <a class="date" href='/recursos/2017/07/31/aprendizaje-pac/'><time datetime='2017-07-31'>Añadido el 31/07/2017</time></a>
+  
+    <p class="tag-list">
+      <i class="icon icon-tags"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes">apuntes</a><i class="separator"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes/informática">apuntes/informática</a>
+      
+    </p>
+  </span>
+</article>
+
+
+
+
+
+
+
+<article>
+  <p class="post-title">
+    <a href='https://github.com/libreim/introCategorias/blob/master/tex/main.pdf' class="title">
+      
+      <i class="icon icon-small icon-link-ext"></i>
+      
+      Cálculo en una variable
+    </a>
+    
+  </p>
+  <span class="post-data">
+    
+     
+    <span class="author">Javier Pérez</span>
+    
+    <a class="date" href='/recursos/2017/07/27/t2/'><time datetime='2017-07-27'>Añadido el 27/07/2017</time></a>
+  
+    <p class="tag-list">
+      <i class="icon icon-tags"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes">apuntes</a><i class="separator"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes/matemáticas">apuntes/matemáticas</a><i class="separator"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes/cosillas">apuntes/cosillas</a><i class="separator"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes/matemáticas/análisis">apuntes/matemáticas/análisis</a>
+      
+    </p>
+  </span>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article>
+  <p class="post-title">
+    <a href='https://github.com/libreim/introCategorias/blob/master/tex/main.pdf' class="title">
+      
+      <i class="icon icon-small icon-link-ext"></i>
+      
+      Teoría de categorías
+    </a>
+    
+  </p>
+  <span class="post-data">
+    
+     
+    <span class="author">M42</span>
+    
+    <a class="date" href='/recursos/2017/01/01/t/'><time datetime='2017-01-01'>Añadido el 01/01/2017</time></a>
+  
+    <p class="tag-list">
+      <i class="icon icon-tags"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes">apuntes</a><i class="separator"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes/matemáticas">apuntes/matemáticas</a><i class="separator"></i>
+      
+      <a class="tag-list-link" href="/recursos/apuntes/matemáticas/álgebra">apuntes/matemáticas/álgebra</a>
+      
+    </p>
+  </span>
+</article>
+
+
+
+
+
+
+
+        
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3 pure-u-lg-1-3">
+
+          <a href="/recursos/new" class="pure-button pure-button-primary">
+            <i class="fa icon icon-plus"></i>
+            Añadir un nuevo recurso
+          </a>
+          
+          <h3>Etiquetas descendientes</h3>
+          
+          <ul class="tag-tree level-1">
+  
+  
+  
   
   
   
@@ -122,7 +244,7 @@
     <a href="/recursos/apuntes/matemáticas">matemáticas</a>
     
     
-    <ul>
+    <ul class="tag-tree level-2">
       
       
       
@@ -161,9 +283,14 @@
       
       
       
+      
+      
+      
     </ul>
     
   </li>
+  
+  
   
   
   
@@ -187,7 +314,10 @@
     <a href="/recursos/apuntes/cosillas">cosillas</a>
     
     
-    <ul>
+    <ul class="tag-tree level-2">
+      
+      
+      
       
       
       
@@ -224,108 +354,96 @@
   
   
   
-</ul>
-
-
-[Al otro lado]
-
-<ul>
   
   
   
-  <li class="archive_list">
-    <a class="archive_list_article_link" href='/recursos/2017/07/27/t2/'><time style="color:#666;font-size:11px;" datetime='2017-07-27'>07/27/17</time></a> <a class="archive_list_article_link" href='https://github.com/libreim/introCategorias/blob/master/tex/main.pdf'>Cálculo en una variable</a>
-    <p class="summary"></p>
-    <ul class="tag_list">
+  
+  
+  
+  <li>
+    <a href="/recursos/apuntes/informática">informática</a>
+    
+    
+    <ul class="tag-tree level-2">
       
-      <li class="inline archive_list"><a class="tag_list_link" href="/apuntes">apuntes</a></li>
       
-      <li class="inline archive_list"><a class="tag_list_link" href="/apuntes/matemáticas">apuntes/matemáticas</a></li>
       
-      <li class="inline archive_list"><a class="tag_list_link" href="/apuntes/cosillas">apuntes/cosillas</a></li>
       
-      <li class="inline archive_list"><a class="tag_list_link" href="/apuntes/matemáticas/análisis">apuntes/matemáticas/análisis</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
     </ul>
+    
   </li>
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="archive_list">
-    <a class="archive_list_article_link" href='/recursos/2017/01/01/t/'><time style="color:#666;font-size:11px;" datetime='2017-01-01'>01/01/17</time></a> <a class="archive_list_article_link" href='https://github.com/libreim/introCategorias/blob/master/tex/main.pdf'>Teoría de categorías</a>
-    <p class="summary"></p>
-    <ul class="tag_list">
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/apuntes">apuntes</a></li>
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/apuntes/matemáticas">apuntes/matemáticas</a></li>
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/apuntes/matemáticas/álgebra">apuntes/matemáticas/álgebra</a></li>
-      
-    </ul>
-  </li>
-  
-  
-  
-  
-  
-  
+
   
 </ul>
 
-      </div>
-    </main>
-
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">libreim</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            
-              libreim
-            
-            </li>
-            
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
           
-
-          
-        </ul>
+        </div>
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p></p>
+      
+    </article>
+  </div>
+  <div class="pure-u-1-24 pure-u-md-1-24 pure-u-lg-1-5 pure-u-xl-1-5"></div>
+</div>
+
+      <footer class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-1-24 pure-u-lg-1-5"></div>
+    <div class="pure-u-22-24 pure-u-md-22-24 pure-u-lg-3-5">
+      <div class="pure-g">
+		<div class="pure-u-1 pure-u-md-1-3 pure-u-lg-1-3">
+			<h3>Colaboradores</h3>
+	        <ul>
+				
+	        </ul>
+		</div>
+        <div class="pure-u-1 pure-u-md-1-3 pure-u-lg-1-3">
+			<h3>Categorías</h3>
+	        <ul>
+		    	
+	        </ul>
+		</div>
+        <div class="pure-u-1 pure-u-md-1-3 pure-u-lg-1-3">
+        <br></br>
+             <a href="http://osl.ugr.es"><img src="http://osl.ugr.es/logo-osl.png" alt="Logo Oficina de Software Libre de la Universidad de Granada" style="width:200px" /></a>
+             <br></br>
+             Puedes ver este sitio gracias a la ayuda de la OSL-UGR
+         <br></br>
+			<h3>Licencia</h3>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" /></a><br />
+			El contenido de este blog, salvo que se explicite lo contrario, está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>.
+		</div>
       </div>
     </div>
-
-  </div>
-
+    <div class="pure-u-1-24 pure-u-md-1-24 pure-u-lg-1-5"></div>
 </footer>
 
 
-  </body>
-
+      <script id="dsq-count-scr" src="//dgiim.disqus.com/count.js" async></script>
+   </body>
 </html>

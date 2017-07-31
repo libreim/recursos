@@ -1,7 +1,8 @@
 title: libreim
 
-theme: minima
+# theme: minima
 baseurl: /recursos
+assets_path: "https://libreim.github.io/assets"
 
 locale: "es"
 permalink: pretty

@@ -1,6 +1,6 @@
 ---
 title: Plantillas para LaTeX
-author:
+authors:
 - M42
 - andreshp
 - jmml

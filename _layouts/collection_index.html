@@ -3,5 +3,5 @@ layout: default
 ---
 
 {% for element in page.col %}
-<p><a href="{{ element.url }}">{{ element.title }}</a>
+<p><a href="{{ site.baseurl }}{{ element.url }}">{{ element.title }}</a>
 {% endfor %}
