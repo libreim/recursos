@@ -13,6 +13,12 @@ layout: content
   {% endfor %}
   {% endif %}
 
+  {% if post.license %}
+  <span class="license">
+    {{ post.license }}
+  </span>
+  {% endif %}
+  
   <a class="date" href="{{ post.url | prepend: site.baseurl }}">
     {{ post.date | date: "%d-%m-%Y" }}
   </a>

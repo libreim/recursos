@@ -23,6 +23,13 @@ tag_prefix: true
     {% if forloop.first %} {% elsif forloop.last %} y {% else %}, {% endif %}
     <span class="author">{{ author }}</span>
     {% endfor %}
+
+    {% if post.license %}
+    <span class="license">
+      {{ post.license }}
+    </span>
+    {% endif %}
+    
     <a class="date" href='{{ site.baseurl }}{{ post.url }}'><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>Añadido el {{ post.date | date: "%d/%m/%Y" }}</time></a>
   
     <p class="tag-list">
