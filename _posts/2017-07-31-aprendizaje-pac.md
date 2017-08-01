@@ -8,4 +8,7 @@ tags:
 - apuntes/informática
 ---
 
-Apuntes de introducción al aprendizaje PAC
+Apuntes de introducción al **aprendizaje PAC**.
+
+  - [Apuntes](https://github.com/libreim/PAC-learning/blob/master/introduccion.pdf).
+  - [Código fuente](https://github.com/libreim/PAC-learning).
