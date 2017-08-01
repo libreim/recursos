@@ -1,12 +1,12 @@
 ---
 title: Plantillas para LaTeX
 authors:
-- M42
-- andreshp
-- jmml
+- Mario Román
+- Andrés Herrera
+- José María Martín
 tags:
-- codigo
-- codigo/latex
+- código
+- código/latex
 ---
 
 Varios repositorios con plantillas para LaTeX.
